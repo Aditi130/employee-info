@@ -1,52 +1,23 @@
-# Prerequisites
-*.d
-
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+#include<stdio.h>
+struct employee
+{
+    int phonenumber,age,salary;
+    char name[25];
+}emp[100];
+ 
+void main()
+{
+    int i,n;
+    printf("Enter the no of employees\n");
+    scanf("%d",&n);
+    printf("Enter employee info as phonenumber, name, age, salary\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d %s %d %d",&emp[i].phonenumber,emp[i].name,&emp[i].age,&emp[i].salary);
+    }
+    printf("\nEMP_NAME\tEMP_NAME\tEMP_AGE\t\tEMP_SAL\n");
+    for(i=0;i<n;i++)
+    {
+        printf("%d\t\t%s\t\t%d\t\t%d\n",emp[i].phonenumber,emp[i].name,emp[i].age,emp[i].salary);
+    }
+}
